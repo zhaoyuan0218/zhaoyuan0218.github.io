@@ -12,10 +12,10 @@
     
     <item>
       <title>如何利用github Pages和hugo搭建个人博客？</title>
-      <link>https://zhaoyuan0218.github.io/post/first/</link>
+      <link>https://zhaoyuan0218.github.io/post/blog/</link>
       <pubDate>Fri, 08 May 2020 10:20:03 +0800</pubDate>
       
-      <guid>https://zhaoyuan0218.github.io/post/first/</guid>
+      <guid>https://zhaoyuan0218.github.io/post/blog/</guid>
       <description>基本概念  GitHub Pages是一个静态站点托管服务，直接将个人、组织或项目的页面托管于 GitHub 库或仓库 (repository) 中。 Hugo 是一个用 Go 语言编写的静态站点生成器，它针对速度、易用性和可配置性进行了优化，快速灵活。  搭建步骤 hugo生成静态站点  cd ${workspace} hugo new site zy-blog cd zy-blog Choose a theme from https://themes.gohugo.io/, I like https://themes.gohugo.io/hugo-theme-m10c/ cd theme &amp;amp;&amp;amp; git clone https://github.com/vaga/hugo-theme-m10c.git m10c 将themes/m10c/exampleSite/config.toml复制到根目录zy-blog下 修改config.yml里的baseURL = &amp;ldquo;https://zhaoyuan0218.github.io/&amp;quot;(这个值为后面github里的repo)和themesDir = &amp;ldquo;../..&amp;ldquo;注释掉（因为config.yml的路径变化了） 在根目录zy-blog下hugo server -D，浏览器打开http://localhost:1313/预览，看是否符合预期 在根目录zy-blog下hugo构建静态站点，打包到public  github pages配置  登录github.com，新建repositories：zhaoyuan0218.github.io cd zy-blog/public去关联此repositories git init ：此时会发现public下多了一个.git目录 git remote add origin	git@github.com:zhaoyuan0218/zhaoyuan0218.github.io.git git add . git commit -m &amp;ldquo;template&amp;rdquo; git push origin master 浏览器打开zhaoyuan0218.</description>
     </item>
     

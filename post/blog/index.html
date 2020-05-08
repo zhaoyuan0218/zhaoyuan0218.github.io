@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>如何利用github Pages和hugo搭建个人博客？ // Your title</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.70.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://zhaoyuan0218.github.io/css/main.min.61bb32028587f24ca28522d8d197970c7ef33284e5fffb45a75fcbbb2dbc4dcb.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何利用github Pages和hugo搭建个人博客？"/>
+<meta name="twitter:description" content="基本概念  GitHub Pages是一个静态站点托管服务，直接将个人、组织或项目的页面托管于 GitHub 库或仓库 (repository) 中。 Hugo 是一个用 Go 语言编写的静态站点生成器，它针对速度、易用性和可配置性进行了优化，快速灵活。  搭建步骤 hugo生成静态站点  cd ${workspace} hugo new site zy-blog cd zy-blog Choose a theme from https://themes.gohugo.io/, I like https://themes.gohugo.io/hugo-theme-m10c/ cd theme &amp;&amp; git clone https://github.com/vaga/hugo-theme-m10c.git m10c 将themes/m10c/exampleSite/config.toml复制到根目录zy-blog下 修改config.yml里的baseURL = &ldquo;https://zhaoyuan0218.github.io/&quot;(这个值为后面github里的repo)和themesDir = &ldquo;../..&ldquo;注释掉（因为config.yml的路径变化了） 在根目录zy-blog下hugo server -D，浏览器打开http://localhost:1313/预览，看是否符合预期 在根目录zy-blog下hugo构建静态站点，打包到public  github pages配置  登录github.com，新建repositories：zhaoyuan0218.github.io cd zy-blog/public去关联此repositories git init ：此时会发现public下多了一个.git目录 git remote add origin	git@github.com:zhaoyuan0218/zhaoyuan0218.github.io.git git add . git commit -m &ldquo;template&rdquo; git push origin master 浏览器打开zhaoyuan0218."/>
+
+    <meta property="og:title" content="如何利用github Pages和hugo搭建个人博客？" />
+<meta property="og:description" content="基本概念  GitHub Pages是一个静态站点托管服务，直接将个人、组织或项目的页面托管于 GitHub 库或仓库 (repository) 中。 Hugo 是一个用 Go 语言编写的静态站点生成器，它针对速度、易用性和可配置性进行了优化，快速灵活。  搭建步骤 hugo生成静态站点  cd ${workspace} hugo new site zy-blog cd zy-blog Choose a theme from https://themes.gohugo.io/, I like https://themes.gohugo.io/hugo-theme-m10c/ cd theme &amp;&amp; git clone https://github.com/vaga/hugo-theme-m10c.git m10c 将themes/m10c/exampleSite/config.toml复制到根目录zy-blog下 修改config.yml里的baseURL = &ldquo;https://zhaoyuan0218.github.io/&quot;(这个值为后面github里的repo)和themesDir = &ldquo;../..&ldquo;注释掉（因为config.yml的路径变化了） 在根目录zy-blog下hugo server -D，浏览器打开http://localhost:1313/预览，看是否符合预期 在根目录zy-blog下hugo构建静态站点，打包到public  github pages配置  登录github.com，新建repositories：zhaoyuan0218.github.io cd zy-blog/public去关联此repositories git init ：此时会发现public下多了一个.git目录 git remote add origin	git@github.com:zhaoyuan0218/zhaoyuan0218.github.io.git git add . git commit -m &ldquo;template&rdquo; git push origin master 浏览器打开zhaoyuan0218." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhaoyuan0218.github.io/post/blog/" />
+<meta property="article:published_time" content="2020-05-08T10:20:03+08:00" />
+<meta property="article:modified_time" content="2020-05-08T10:20:03+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://zhaoyuan0218.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Your title</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/gohugoio" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://twitter.com/gohugoio" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">如何利用github Pages和hugo搭建个人博客？</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 8, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div><div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+          <a class="tag" href="https://zhaoyuan0218.github.io/tags/%E7%94%9F%E6%B4%BB/">生活</a></div></div>
+    </header>
+    <div class="post-content">
+      <h2 id="基本概念">基本概念</h2>
+<ul>
+<li>GitHub Pages是一个静态站点托管服务，直接将个人、组织或项目的页面托管于 GitHub 库或仓库 (repository) 中。</li>
+<li>Hugo 是一个用 Go 语言编写的静态站点生成器，它针对速度、易用性和可配置性进行了优化，快速灵活。</li>
+</ul>
+<h2 id="搭建步骤">搭建步骤</h2>
+<h4 id="hugo生成静态站点">hugo生成静态站点</h4>
+<ul>
+<li>cd ${workspace}</li>
+<li>hugo new site zy-blog</li>
+<li>cd zy-blog</li>
+<li>Choose a theme from <a href="https://themes.gohugo.io/,">https://themes.gohugo.io/,</a> I like <a href="https://themes.gohugo.io/hugo-theme-m10c/">https://themes.gohugo.io/hugo-theme-m10c/</a></li>
+<li>cd theme &amp;&amp; git clone <a href="https://github.com/vaga/hugo-theme-m10c.git">https://github.com/vaga/hugo-theme-m10c.git</a> m10c</li>
+<li>将themes/m10c/exampleSite/config.toml复制到根目录zy-blog下</li>
+<li>修改config.yml里的baseURL = &ldquo;<a href="https://zhaoyuan0218.github.io/%22(">https://zhaoyuan0218.github.io/&quot;(</a>这个值为后面github里的repo)和themesDir = &ldquo;../..&ldquo;注释掉（因为config.yml的路径变化了）</li>
+<li>在根目录zy-blog下hugo server -D，浏览器打开http://localhost:1313/预览，看是否符合预期</li>
+<li>在根目录zy-blog下hugo构建静态站点，打包到public</li>
+</ul>
+<h4 id="github-pages配置">github pages配置</h4>
+<ul>
+<li>登录github.com，新建repositories：zhaoyuan0218.github.io</li>
+<li>cd zy-blog/public去关联此repositories</li>
+<li>git init ：此时会发现public下多了一个.git目录</li>
+<li>git remote add origin	git@github.com:zhaoyuan0218/zhaoyuan0218.github.io.git</li>
+<li>git add .</li>
+<li>git commit -m &ldquo;template&rdquo;</li>
+<li>git push origin master</li>
+<li>浏览器打开zhaoyuan0218.github.io查看是否符合预期</li>
+</ul>
+<h4 id="写blog">写blog</h4>
+<ul>
+<li>cd zy-blog &amp;&amp; hugo new post/my-first-post.md(my-first-post是blog文章)</li>
+<li>在zy-blog/content/post下有个my-first-post.md文件，就是写blog的文件啦</li>
+<li>my-first-post.md里title为blog文章名，还可以添加tags，然后就可以自由用markdown写自己的博客啦</li>
+<li>编辑完成后同样可以浏览器访问http://localhost:1313/预览</li>
+<li>没问题后将my-first-post.md里的draft设置为false，然后hugo构建静态站点，提交到github，之后通过zhaoyuan0218.github.io访问（跟预览效果一样）</li>
+</ul>
+<h2 id="其他">其他</h2>
+<ul>
+<li>hugo安装</li>
+<li>参考资料：https://zhuanlan.zhihu.com/p/57361697</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
