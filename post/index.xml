@@ -5,7 +5,7 @@
     <link>https://zhaoyuan0218.github.io/post/</link>
     <description>Recent content in Posts on Your title</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 08 May 2020 10:20:03 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2020 17:47:09 +0800</lastBuildDate>
     
 	<atom:link href="https://zhaoyuan0218.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,10 +13,21 @@
     <item>
       <title>如何利用github Pages和hugo搭建个人博客？</title>
       <link>https://zhaoyuan0218.github.io/post/blog/</link>
-      <pubDate>Fri, 08 May 2020 10:20:03 +0800</pubDate>
+      <pubDate>Tue, 08 Sep 2020 17:47:09 +0800</pubDate>
       
       <guid>https://zhaoyuan0218.github.io/post/blog/</guid>
-      <description>基本概念  GitHub Pages是一个静态站点托管服务，直接将个人、组织或项目的页面托管于 GitHub 库或仓库 (repository) 中。 Hugo 是一个用 Go 语言编写的静态站点生成器，它针对速度、易用性和可配置性进行了优化，快速灵活。  搭建步骤 hugo生成静态站点  cd ${workspace} hugo new site zy-blog cd zy-blog Choose a theme from https://themes.gohugo.io/, I like https://themes.gohugo.io/hugo-theme-m10c/ cd theme &amp;amp;&amp;amp; git clone https://github.com/vaga/hugo-theme-m10c.git m10c 将themes/m10c/exampleSite/config.toml复制到根目录zy-blog下 修改config.yml里的baseURL = &amp;ldquo;https://zhaoyuan0218.github.io/&amp;quot;(这个值为后面github里的repo)和themesDir = &amp;ldquo;../..&amp;ldquo;注释掉（因为config.yml的路径变化了） 在根目录zy-blog下hugo server -D，浏览器打开http://localhost:1313/预览，看是否符合预期 在根目录zy-blog下hugo构建静态站点，打包到public  github pages配置  登录github.com，新建repositories：zhaoyuan0218.github.io cd zy-blog/public去关联此repositories git init ：此时会发现public下多了一个.git目录 git remote add origin	git@github.com:zhaoyuan0218/zhaoyuan0218.github.io.git git add . git commit -m &amp;ldquo;template&amp;rdquo; git push origin master 浏览器打开zhaoyuan0218.</description>
+      <description>基本概念  GitHub Pages是一个静态站点托管服务，直接将个人、组织或项目的页面托管于 GitHub 库或仓库 (repository) 中。 Hugo 是一个用 Go 语言编写的静态站点生成器，它针对速度、易用性和可配置性进行了优化，快速灵活。  搭建步骤 hugo生成静态站点  cd ${workspace} hugo new site zy-blog cd zy-blog Choose a theme from https://themes.gohugo.io/, I like https://themes.gohugo.io/hugo-theme-m10c/ cd theme &amp;amp;&amp;amp; git clone https://github.com/vaga/hugo-theme-m10c.git m10c 将themes/m10c/exampleSite/config.toml复制到根目录zy-blog下 修改config.yml里的baseURL = “https://zhaoyuan0218.github.io/&amp;quot;(这个值为后面github里的repo)和themesDir = “../..“注释掉（因为config.yml的路径变化了） 在根目录zy-blog下hugo server -D，浏览器打开http://localhost:1313/预览，看是否符合预期 在根目录zy-blog下hugo构建静态站点，打包到public  github pages配置  登录github.com，新建repositories：zhaoyuan0218.github.io cd zy-blog/public去关联此repositories git init ：此时会发现public下多了一个.git目录 git remote add origin git@github.com:zhaoyuan0218/zhaoyuan0218.github.io.git git add . git commit -m “template” git push origin master 浏览器打开zhaoyuan0218.</description>
+    </item>
+    
+    <item>
+      <title>Java细节</title>
+      <link>https://zhaoyuan0218.github.io/post/java/</link>
+      <pubDate>Tue, 08 Sep 2020 12:35:28 +0800</pubDate>
+      
+      <guid>https://zhaoyuan0218.github.io/post/java/</guid>
+      <description>for和foreah中的return public static void testReturn() { List&amp;lt;Integer&amp;gt; l = new ArrayList&amp;lt;&amp;gt;(); l.add(1); l.add(2); l.add(3); l.stream().forEach(h-&amp;gt;{ System.out.println(h); if(h== 2){ return; } System.out.println(&amp;#34;after if:h=&amp;#34;+h); }); System.out.println(&amp;#34;xxx&amp;#34;); } public static void testReturn2() { for(int i=1;i&amp;lt;4;i++){ System.out.println(i); if(i==2){ return; } System.out.println(&amp;#34;after if:i=&amp;#34;+i); } System.out.println(&amp;#34;xxx&amp;#34;); } 输出：
+1 after if:h=1 2 3 after if:h=3 xxx 1 after if:i=1 2 解释：
+ forEach走到return后，相当于跳过本次forEach,继续下一次forEach； for走到return后，直接跳到调用函数处  </description>
     </item>
     
   </channel>

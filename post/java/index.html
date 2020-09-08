@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Java细节 // Your title</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://zhaoyuan0218.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java细节"/>
+<meta name="twitter:description" content="for和foreah中的return public static void testReturn() { List&lt;Integer&gt; l = new ArrayList&lt;&gt;(); l.add(1); l.add(2); l.add(3); l.stream().forEach(h-&gt;{ System.out.println(h); if(h== 2){ return; } System.out.println(&#34;after if:h=&#34;&#43;h); }); System.out.println(&#34;xxx&#34;); } public static void testReturn2() { for(int i=1;i&lt;4;i&#43;&#43;){ System.out.println(i); if(i==2){ return; } System.out.println(&#34;after if:i=&#34;&#43;i); } System.out.println(&#34;xxx&#34;); } 输出：
+1 after if:h=1 2 3 after if:h=3 xxx 1 after if:i=1 2 解释：
+ forEach走到return后，相当于跳过本次forEach,继续下一次forEach； for走到return后，直接跳到调用函数处  "/>
+
+    <meta property="og:title" content="Java细节" />
+<meta property="og:description" content="for和foreah中的return public static void testReturn() { List&lt;Integer&gt; l = new ArrayList&lt;&gt;(); l.add(1); l.add(2); l.add(3); l.stream().forEach(h-&gt;{ System.out.println(h); if(h== 2){ return; } System.out.println(&#34;after if:h=&#34;&#43;h); }); System.out.println(&#34;xxx&#34;); } public static void testReturn2() { for(int i=1;i&lt;4;i&#43;&#43;){ System.out.println(i); if(i==2){ return; } System.out.println(&#34;after if:i=&#34;&#43;i); } System.out.println(&#34;xxx&#34;); } 输出：
+1 after if:h=1 2 3 after if:h=3 xxx 1 after if:i=1 2 解释：
+ forEach走到return后，相当于跳过本次forEach,继续下一次forEach； for走到return后，直接跳到调用函数处  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhaoyuan0218.github.io/post/java/" />
+<meta property="article:published_time" content="2020-09-08T12:35:28+08:00" />
+<meta property="article:modified_time" content="2020-09-08T12:35:28+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://zhaoyuan0218.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Your title</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/gohugoio" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://twitter.com/gohugoio" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Java细节</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 8, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div><div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+          <a class="tag" href="https://zhaoyuan0218.github.io/tags/%E6%8A%80%E6%9C%AF/">技术</a></div></div>
+    </header>
+    <div class="post-content">
+      <h4 id="for和foreah中的return">for和foreah中的return</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testReturn</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> l <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        l<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+        l<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>2<span style="color:#f92672">);</span>
+        l<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        l<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>h<span style="color:#f92672">-&gt;{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>h<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>h<span style="color:#f92672">==</span> 2<span style="color:#f92672">){</span>
+                <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;after if:h=&#34;</span><span style="color:#f92672">+</span>h<span style="color:#f92672">);</span>
+        <span style="color:#f92672">});</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;xxx&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testReturn2</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>1<span style="color:#f92672">;</span>i<span style="color:#f92672">&lt;</span>4<span style="color:#f92672">;</span>i<span style="color:#f92672">++){</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i<span style="color:#f92672">==</span>2<span style="color:#f92672">){</span>
+                <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;after if:i=&#34;</span><span style="color:#f92672">+</span>i<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;xxx&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>输出：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">1
+after <span style="color:#66d9ef">if</span><span style="color:#f92672">:</span>h<span style="color:#f92672">=</span>1
+2
+3
+after <span style="color:#66d9ef">if</span><span style="color:#f92672">:</span>h<span style="color:#f92672">=</span>3
+xxx
+1
+after <span style="color:#66d9ef">if</span><span style="color:#f92672">:</span>i<span style="color:#f92672">=</span>1
+2
+</code></pre></div><p>解释：</p>
+<ul>
+<li>forEach走到return后，相当于跳过本次forEach,继续下一次forEach；</li>
+<li>for走到return后，直接跳到调用函数处</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

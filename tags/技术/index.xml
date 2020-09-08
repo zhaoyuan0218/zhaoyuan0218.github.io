@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on Your title</title>
+    <link>https://zhaoyuan0218.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on Your title</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 08 Sep 2020 12:35:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://zhaoyuan0218.github.io/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java细节</title>
+      <link>https://zhaoyuan0218.github.io/post/java/</link>
+      <pubDate>Tue, 08 Sep 2020 12:35:28 +0800</pubDate>
+      
+      <guid>https://zhaoyuan0218.github.io/post/java/</guid>
+      <description>for和foreah中的return public static void testReturn() { List&amp;lt;Integer&amp;gt; l = new ArrayList&amp;lt;&amp;gt;(); l.add(1); l.add(2); l.add(3); l.stream().forEach(h-&amp;gt;{ System.out.println(h); if(h== 2){ return; } System.out.println(&amp;#34;after if:h=&amp;#34;+h); }); System.out.println(&amp;#34;xxx&amp;#34;); } public static void testReturn2() { for(int i=1;i&amp;lt;4;i++){ System.out.println(i); if(i==2){ return; } System.out.println(&amp;#34;after if:i=&amp;#34;+i); } System.out.println(&amp;#34;xxx&amp;#34;); } 输出：
+1 after if:h=1 2 3 after if:h=3 xxx 1 after if:i=1 2 解释：
+ forEach走到return后，相当于跳过本次forEach,继续下一次forEach； for走到return后，直接跳到调用函数处  </description>
+    </item>
+    
+  </channel>
+</rss>
